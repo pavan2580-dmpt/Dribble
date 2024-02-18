@@ -8,20 +8,20 @@ const g = graph.Standalone()
 const Project = g.type('Project',{
   title:g.string(),
   description : g.string(),
-  image:g.url(),
-  liveSiteUrl : g.url(),
-  githunUrl : g.url(),
+  image:g.string(),
+  liveSiteUrl : g.string(),
+  githunUrl : g.string(),
   category : g.string(),
   createdBy:g.string()
 })
 
 const User = g.type('User', {
   name : g.string(),
-  Email:g.email(),
-  avatarUrl :g.url(),
+  Email:g.string(),
+  avatarUrl :g.string(),
   description :g.string().optional(),
-  githubUrl : g.url().optional(),
-  linkedinUrl :g.url().optional(),
+  githubUrl : g.string().optional(),
+  linkedinUrl :g.string().optional(),
   projects:g.ref(Project).list().optional(),
 })
 

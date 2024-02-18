@@ -5,7 +5,7 @@ import { NavLinks } from '@/constants'
 import AuthProviders from './AuthProviders'
 
 function NavBar() {
-    const session = null;
+    const session = true;
   return (
     <>
     <nav className='navbar-page flex px-10 justify-between items-center w-[100%] h-[60px] border-2
