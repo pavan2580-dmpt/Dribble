@@ -1,5 +1,4 @@
 "use client"
-
 import { getProviders,signIn } from "next-auth/react"
 import { useState,useEffect } from "react"
 
@@ -21,8 +20,6 @@ function AuthProviders() {
     const fetchProviders = async()=>{
       const res = await getProviders();
       setProviders(res);
-
-      console.log(res)
     }
     fetchProviders();
   },[])

@@ -14,7 +14,6 @@ type Props = {
 
 function ProjectForm({type,session}:Props) {
 
-
   const [isSub,setIsSub] = useState(false)
 
   const [form,setForm] = useState({
@@ -34,9 +33,8 @@ function ProjectForm({type,session}:Props) {
         if(type === "create"){
           
         }
-      } catch (error) {
-        
-      }
+      } catch (error) {       
+    }
 
    };
 
@@ -48,9 +46,7 @@ function ProjectForm({type,session}:Props) {
         return alert("Uplaod an image file")
       }
       const reader = new FileReader();
-
       reader.readAsDataURL(file);
-
       reader.onload = () =>{
         const result = reader.result as string;
         handleStateChange('image',result);
